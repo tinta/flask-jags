@@ -1,0 +1,34 @@
+$base-colors: (
+    "gray-dark"     : #414141,
+    "gray-md"       : #9F9FA0,
+    "gray-md-dark"  : #7f7f7f,
+    "gray-md-light" : #CCCCCC,
+    "gray-light"    : #EDEDED,
+    "gray-xlight"   : #F6F6F6,
+    "white"         : #FFFFFF,
+    "black-overlay" : rgba(0,0,0,0.75),
+    "none"          : transparent
+);
+
+$palette: (
+    "blue"  : #587A89,
+    "yellow": #FFB03B,
+    "green" : #468966,
+    "red"   : #D06340
+);
+
+@each $key, $color in $palette {
+    $darkenedColor: ("#{$key}-dark": darken($color, 10%));
+    $palette: map-merge($darkenedColor, $palette)
+}
+
+$bg-colors: map-merge($base-colors, $palette);
+
+$text-colors: map-merge($base-colors, $palette);
+
+$border-colors: (
+    "gray-dark": map-get($base-colors, "gray-dark"),
+    "gray-md": map-get($base-colors, "gray-md"),
+    "green": map-get($palette, "green"),
+    "red": map-get($palette, "red"),
+);

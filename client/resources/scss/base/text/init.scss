@@ -1,0 +1,38 @@
+[class*="text-"] {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: 0.05em;
+
+    p {
+        margin: 0;
+        line-height: 1.25;
+        font-size: inherit;
+        display: inline;
+    }
+
+    .capitalize {
+        text-transform: capitalize;
+    }
+
+    .text-thin {
+        font-weight: 100;
+        letter-spacing: 0.08em;
+    }
+
+    .text-reg {
+        font-weight: 200;
+    }
+
+    .text-bold {
+        font-weight: 400;
+    }
+
+    .text-xbold {
+        font-weight: 500;
+    }
+}
+
+@import "font-size";
+@import "text-align";
+@import "text-color";

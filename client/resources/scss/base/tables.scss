@@ -1,0 +1,59 @@
+.valign-top {
+    vertical-align: top;
+}
+
+table {
+    &.valign-top {
+        td {
+            vertical-align: top;
+        }
+    }
+
+    td {
+        padding: 0;
+        vertical-align: middle;
+        display: table-cell;
+
+        > * {
+            display: inline-block;
+        }
+    }
+
+    tbody tr {
+        border-top: 1px solid white;
+    }
+
+    .table-arrow {
+        font-size: 10px;
+        position: absolute;
+        right: 7px;
+        top: 13px;
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    $width: 0.5em;
+    $height: 0.8em;
+
+    .selected {
+
+        .table-arrow {
+            display: inline-block;
+            border-left: $width solid transparent;
+            border-right: $width solid transparent;
+            border-bottom: 0 solid transparent;
+            border-top: $height solid map-get($base-colors, gray-light);
+        }
+
+        &.reversed {
+            .table-arrow {
+                display: inline-block;
+                border-left: $width solid transparent;
+                border-right: $width solid transparent;
+                border-bottom: $height solid map-get($base-colors, gray-light);
+                border-top: 0 solid transparent;
+            }
+        }
+    }
+}

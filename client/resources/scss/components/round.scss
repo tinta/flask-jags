@@ -1,0 +1,52 @@
+[class*="round-"] {
+    overflow: auto;
+}
+
+@include breakpoint(round-top-light) {
+    border-top-left-radius: map-get($radius-sizes, light);
+    border-top-right-radius: map-get($radius-sizes, light);
+}
+
+@include breakpoint(round-bottom-light) {
+    border-bottom-left-radius: map-get($radius-sizes, light);
+    border-bottom-right-radius: map-get($radius-sizes, light);
+}
+
+.round-md-tl {
+    border-top-left-radius: map-get($radius-sizes, md);
+}
+
+.round-md-tr {
+    border-top-right-radius: map-get($radius-sizes, md);
+}
+
+.round-md-bl {
+    border-bottom-left-radius: map-get($radius-sizes, md);
+}
+
+.round-md-br {
+    border-bottom-right-radius: map-get($radius-sizes, md);
+}
+
+
+.round-md-top {
+    @extend .round-md-tl;
+    @extend .round-md-tr;
+}
+
+.round-md-bottom {
+    @extend .round-md-bl;
+    @extend .round-md-br;
+}
+
+.round-md-left {
+    @extend .round-md-tl;
+    @extend .round-md-bl;
+}
+
+.round-md-right {
+    @extend .round-md-tr;
+    @extend .round-md-br;
+}
+
+@include breakpoint($radius-sizes, border-radius, "round");

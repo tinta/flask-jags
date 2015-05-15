@@ -1,0 +1,6 @@
+@each $key, $color in $text-colors {
+    html body .text-#{$key},
+    html body .text-hover-#{$key}:hover {
+        color: $color;
+    }
+}

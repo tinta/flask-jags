@@ -1,0 +1,38 @@
+@import "reset";
+@import "layout/init";
+@import "style/init";
+@import "text/init";
+
+@import "media-query";
+@import "forms";
+@import "tables";
+
+html {
+    min-width: 950px;
+}
+
+a,
+label,
+[ng-click],
+[type="submit"],
+.clickable {
+    cursor: pointer;
+}
+
+.unselectable {
+    &::selection {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    *::selection {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

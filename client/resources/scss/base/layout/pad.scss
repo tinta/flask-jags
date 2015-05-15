@@ -1,0 +1,48 @@
+$pad: 0.5em;
+
+%pad {
+    display: inline-block;
+}
+html {
+    @each $key, $val in $dirs {
+        .pad-#{$key} {
+            padding-#{$val}: $pad;
+            @extend %pad;
+        }
+
+        .pad-#{$key}-2x {
+            padding-#{$val}: $pad * 2;
+            @extend %pad;
+        }
+    }
+
+    .pad-tb {
+        @extend .pad-t;
+        @extend .pad-b;
+    }
+
+    .pad-lr {
+        @extend .pad-l;
+        @extend .pad-r;
+    }
+
+    .pad {
+        @extend .pad-lr;
+        @extend .pad-tb;
+    }
+
+    .pad-tb-2x {
+        @extend .pad-t-2x;
+        @extend .pad-b-2x;
+    }
+
+    .pad-lr-2x {
+        @extend .pad-l-2x;
+        @extend .pad-r-2x;
+    }
+
+    .pad-2x {
+        @extend .pad-lr-2x;
+        @extend .pad-tb-2x;
+    }
+}

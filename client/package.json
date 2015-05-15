@@ -1,0 +1,44 @@
+{
+  "name": "flask-jags",
+  "version": "0.0.1",
+  "description": "Boilerplate flask app integrated with angular, jade, scss, and gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xmunoz/flask-jags"
+  },
+  "keywords": [
+    "flask-jags",
+    "angular",
+    "flask",
+    "gulp",
+    "scss",
+    "jade",
+    "foundation"
+  ],
+  "author": "Cristina Munoz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xmunoz/flask-jags/issues"
+  },
+  "homepage": "https://github.com/xmunoz/flask-jags",
+  "dependencies": {
+    "angular": "^1.3.15",
+    "font-awesome-plus": "^4.3.0",
+    "foundation": "^4.2.1-1",
+    "jquery": "^2.1.3",
+    "lodash": "^3.6.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-jshint": "1.8.4",
+    "gulp-load-plugins": "0.8.0",
+    "gulp-rename": "1.2.0",
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "1.3.0",
+    "map-stream": "0.0.5"
+  }
+}

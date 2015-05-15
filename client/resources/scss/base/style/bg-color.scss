@@ -1,0 +1,15 @@
+@each $key, $color in $bg-colors {
+    .bg-#{$key} {
+        background-color: $color;
+        fill: $color;
+    }
+
+    .bg-hover-#{$key}:hover {
+        background-color: $color;
+        fill: $color;
+    }
+}
+
+.fill {
+    background-color: transparent;
+}

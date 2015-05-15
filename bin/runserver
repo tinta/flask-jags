@@ -1,0 +1,5 @@
+#!/bin/sh
+
+root_dir="${PWD%/bin}"
+source "$root_dir/server/venv_flaskapp/bin/activate"
+mod_wsgi-express start-server server/flaskapp.wsgi --document-root client/ --python-path server/ --log-to-terminal

@@ -1,0 +1,26 @@
+@each $key, $color in $border-colors {
+    .border-#{$key} {
+        border-width: 1px;
+        border-style: solid;
+        border-color: $color
+    }
+
+    @each $dirKey, $dirVal in $dirs {
+        .border-#{$key}-#{$dirKey} {
+            border-width: 0;
+            border-#{$dirVal}-width: 1px;
+            border-style: solid;
+            border-color: $color
+        }
+    }
+}
+
+.border-none {
+    border-width: 0;
+}
+
+@each $dirKey, $dirVal in $dirs {
+    .border-none-#{$dirKey} {
+        border-#{$dirVal}-width: 0;
+    }
+}
